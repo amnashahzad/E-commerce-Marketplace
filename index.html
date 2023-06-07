@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce Marketplace</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="Untitled-2.png" alt="Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#Products"><i class="fas fa-shopping-cart"></i> Products</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+    
+    <h1>Product</h1>
+  </header>
+
+  <div id="product-list">
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Seg4iAB1a5n-6E03WVKHQuEakP4OshoqBA&usqp=CAU" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Price: $9.99</p>
+      <button onclick="addToCart('Product 1', 9.99)">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyvOyekoSUzx6ZOnsR_Mccd5gAo24ZaB3GLZXgfSDmmjAoc0v-fFaDax0jbGAU3LBfQh8&usqp=CAU" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Price: $14.99</p>
+      <button onclick="addToCart('Product 2', 14.99)">Add to Cart</button>
+    </div>
+    
+    <!-- Add more product entries as needed -->
+  </div>
+
+  <div id="cart">
+    <!-- Shopping cart goes here -->
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items">
+      <!-- Cart items will be added dynamically -->
+    </ul>
+    <p>Total: <span id="cart-total">$0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <div class="page" id="checkout-page">
+    <h2>Checkout</h2>
+  
+    <form id="checkout-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+  
+      <label for="credit-card">Credit Card Number:</label>
+      <input type="text" id="credit-card" name="credit-card" required>
+  
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" name="expiry-date" required>
+  
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required>
+  
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
